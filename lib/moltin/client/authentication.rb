@@ -3,6 +3,7 @@ module Moltin
     module Authentication
       def authenticate
         response = post("oauth/access_token", auth_params)
+        puts response
         raise TargetError if response["access_token"].nil?
         @access_token = response["access_token"]
       end
