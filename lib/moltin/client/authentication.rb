@@ -11,8 +11,8 @@ module Moltin
 
       def auth_params
         {
-          :client_id => @client_id,
-          :client_secret => @client_secret,
+          :client_id => "VKub38hTn7IuqNjSI5pd5msulhaQ0TftiyyOUcls",
+          :client_secret => "RPw4V4oZXlqUFKjZbMAoYhOxR7KuJ9fxFUXZgVcw",
           :grant_type => "client_credentials"
         }
       end
