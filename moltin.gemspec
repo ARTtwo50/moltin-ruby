@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Moltin::VERSION
   spec.authors       = ["sfkaos"]
   spec.email         = ["win.raguini@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = "This is an API wrapper for Moltin"
+  spec.description   = "An API wrapper for moltin"
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,11 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "webmock", '~> 1.20'
+  spec.add_development_dependency "rspec"
+
+  spec.add_dependency "byebug"
+  spec.add_dependency "faraday_middleware", '~> 0.9'
+  spec.add_dependency "oauth2"
+  spec.add_dependency 'multi_json', '~> 1.0'
 end
