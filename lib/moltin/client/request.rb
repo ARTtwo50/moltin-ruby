@@ -6,13 +6,17 @@ module Moltin
         request(:post, path, options)
       end
 
+      def get(path, options={})
+        request(:get, path, options)
+      end
+
       private
 
       def request(action, path, options)
         response = connection.send(action, path) do |request|
           request.body = options[:body] if options[:body]
         end
-        response.body.is_a?(String) ? JSON.parse(response.body) : response.body 
+        response.body 
       end
 
     end

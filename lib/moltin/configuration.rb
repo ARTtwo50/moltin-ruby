@@ -6,6 +6,7 @@ module Moltin
  
     DEFAULT_ENDPOINT    = 'https://api.molt.in'
     DEFAULT_METHOD      = :get
+    DEFAULT_VERSION     = "v1"
     DEFAULT_USER_AGENT  = "Moltin API Ruby Gem #{Moltin::VERSION}".freeze
  
     DEFAULT_CLIENT_ID    = nil

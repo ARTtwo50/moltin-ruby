@@ -24,6 +24,7 @@ module Moltin
         send("#{key}=", merged_options[key])
       end
       @target_url = Moltin::Configuration::DEFAULT_ENDPOINT
+      @version = Moltin::Configuration::DEFAULT_VERSION
     end
 
     include Authentication

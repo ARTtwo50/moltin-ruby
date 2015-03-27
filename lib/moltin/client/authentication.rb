@@ -3,7 +3,7 @@ module Moltin
     module Authentication
       def authenticate
         response = post("oauth/access_token", auth_params)
-        if response.status
+        if response["access_token"]
           @access_token = response["access_token"]
         else
           raise TargetError, "Error: #{response}"
@@ -13,10 +13,12 @@ module Moltin
       private
 
       def auth_params
-        {
-          :client_id => "VKub38hTn7IuqNjSI5pd5msulhaQ0TftiyyOUcls",
-          :client_secret => "RPw4V4oZXlqUFKjZbMAoYhOxR7KuJ9fxFUXZgVcw",
-          :grant_type => "client_credentials"
+        { 
+          body: {
+            :client_id => @client_id,
+            :client_secret => @client_secret,
+            :grant_type => "client_credentials"
+          }
         }
       end
     end

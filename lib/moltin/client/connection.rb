@@ -10,6 +10,7 @@ module Moltin
           faraday.adapter  Faraday.default_adapter  # make requests with Net::HTTP
         end
       end
+      
     end
   end
 end

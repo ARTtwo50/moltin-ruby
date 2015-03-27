@@ -1,9 +1,9 @@
 require 'moltin/version'
 require 'moltin/configuration'
 require 'moltin/client'
+require 'moltin/product'
 
 module Moltin
-  # Your code goes here...
   extend Configuration
   extend SingleForwardable
 
@@ -12,7 +12,7 @@ module Moltin
 
   class << self
     def client
-      @client ||= Moltin::Client.new()
+      @client ||= Moltin::Client.new({client_id: @client_id, client_secret: @client_secret})
     end
   end
 end

@@ -21,11 +21,12 @@ describe 'client' do
   end
 
   it "should receive an access token from authenticate" do
-    stub_authenticate(:success, "VKub38hTn7IuqNjSI5pd5msulhaQ0TftiyyOUcls", "RPw4V4oZXlqUFKjZbMAoYhOxR7KuJ9fxFUXZgVcw")
-    client = Moltin::Client.new({client_id: "VKub38hTn7IuqNjSI5pd5msulhaQ0TftiyyOUcls", client_secret: "RPw4V4oZXlqUFKjZbMAoYhOxR7KuJ9fxFUXZgVcw"})
+    stub_authenticate(:success, "clientid123214", "clientsecret21232")
+    client = Moltin::Client.new({client_id: "clientid123214", client_secret: "clientsecret21232"})
     client.authenticate()
     expect(client.access_token).to_not be_nil
   end
+
 
   it "should forward client_id and client_secret" do
     Moltin.client_id = "myClientId1234"
